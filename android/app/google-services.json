@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "508866725723",
+    "project_id": "moetezjebari-0101",
+    "storage_bucket": "moetezjebari-0101.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508866725723:android:af664fb538a20513ca7c7e",
+        "android_client_info": {
+          "package_name": "com.example.ios"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-G5VffI9azilyph-NmzC0mSHXRcfvzro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

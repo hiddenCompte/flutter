@@ -8,6 +8,7 @@ import 'package:ios/common/widgets/button/basic_app_button.dart';
 import 'package:ios/core/configs/assets/app_images.dart';
 import 'package:ios/core/configs/assets/app_vectors.dart';
 import 'package:ios/core/configs/theme/app_colors.dart';
+import 'package:ios/presentation/auth/pages/signup_or_signin.dart';
 import 'package:ios/presentation/choose_mode/bloc/theme_cubit.dart';
 
 class ChooseModePage extends StatelessWidget{
@@ -45,7 +46,7 @@ class ChooseModePage extends StatelessWidget{
                 horizontal: 40,
               ),
               child: Column(
-                children: [
+                children:[
                   Align(
                     alignment: Alignment.topCenter,
                     child :SvgPicture.asset(
@@ -145,7 +146,7 @@ class ChooseModePage extends StatelessWidget{
                 title: 'Continue',
                 onPressed: (){
                     Navigator.push(context,
-                    MaterialPageRoute(builder: (BuildContext context) => const ChooseModePage()
+                    MaterialPageRoute(builder: (BuildContext context) => const SignupOrSignin()
                     )
                     );  
                 })

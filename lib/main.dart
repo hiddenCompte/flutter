@@ -1,10 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:ios/core/configs/theme/app_theme.dart';
+import 'package:ios/firebase_options.dart';
 import 'package:ios/presentation/choose_mode/bloc/theme_cubit.dart';
 import 'package:ios/presentation/splash/pages/splash.dart';
+import 'package:ios/service_locator.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<void> main() async {
@@ -14,6 +17,10 @@ Future<void> main() async {
         ? HydratedStorageDirectory.web
         : HydratedStorageDirectory((await getTemporaryDirectory()).path),
   );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  ); 
+  await initializeDependecies();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
